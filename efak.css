@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday [Friend's Name] 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0a0a0a;                    /* deep black background */
+      color: #d4d4d4;                         /* light gray text for readability */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(74, 93, 63, 0.18), transparent);
+      border-bottom: 1px solid rgba(74, 93, 63, 0.3);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 5.2rem;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: #e0e0c0;                        /* pale cream-gold for contrast */
+      text-shadow: 
+        0 0 10px rgba(107, 142, 35, 0.6),
+        0 0 25px rgba(74, 93, 63, 0.4);
+    }
+
+    .subtitle {
+      font-size: 2.3rem;
+      margin: 20px 0 50px;
+      color: #a8b5a2;                        /* muted olive-gray */
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      padding: 40px 30px;
+      max-width: 1600px;
+      width: 95%;
+      margin: 0 auto 80px;
+    }
+
+    .photo {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #111111;
+      box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.7),
+        inset 0 0 0 1px rgba(74, 93, 63, 0.25);
+      transition: all 0.4s ease;
+      aspect-ratio: 4 / 5;                   /* change to 1 / 1 for square photos */
+      position: relative;
+    }
+
+    .photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      background: linear-gradient(45deg, #556b2f, #8a9a5b, #556b2f) border-box;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.07) translateY(-10px);
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.9),
+        0 0 30px rgba(107, 142, 35, 0.35);
+    }
+
+    .photo:hover::before {
+      opacity: 0.7;                          /* glowing olive frame on hover */
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.12);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #a8b5a2;
+      border-top: 1px solid rgba(74, 93, 63, 0.25);
+    }
+
+    .heart {
+      color: #8a9a5b;                        /* softer olive-green heart */
+      font-size: 1.9em;
+    }
+
+    @media (max-width: 768px) {
+      h1          { font-size: 3.8rem; }
+      .subtitle   { font-size: 1.9rem; }
+      .collage    { gap: 18px; padding: 25px 15px; }
+      .photo      { aspect-ratio: 3 / 4; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HAPPY BIRTHDAY 🎂✨</h1>
+    <div class="subtitle">To [Friend's Name / Nickname] — the real MVP 🖤🌿</div>
+  </header>
+
+  <div class="collage">
+    <!-- === Replace these with YOUR actual JPG filenames === -->
+    <!-- Files must be in the SAME folder as this HTML file -->
+    <div class="photo"><img src="photo1.jpg" alt="Memory 1"></div>
+    <div class="photo"><img src="photo2.jpg" alt="Memory 2"></div>
+    <div class="photo"><img src="photo3.jpg" alt="Memory 3"></div>
+    <div class="photo"><img src="photo4.jpg" alt="Memory 4"></div>
+    <div class="photo"><img src="photo5.jpg" alt="Memory 5"></div>
+    <div class="photo"><img src="photo6.jpg" alt="Memory 6"></div>
+    <div class="photo"><img src="photo7.jpg" alt="Memory 7"></div>
+    <div class="photo"><img src="photo8.jpg" alt="Memory 8"></div>
+    <!-- Add more lines like this for each additional photo -->
+    <!-- <div class="photo"><img src="your-photo-name.jpg" alt="Description"></div> -->
+  </div>
+
+  <footer>
+    Another year of being absolutely legendary.<br>
+    Here's to more late nights, dumb ideas, and epic stories 🌿🖤<br><br>
+    Love from your crew <span class="heart">❤️</span><br>
+    Bengaluru, 2026
+  </footer>
+
+</body>
+</html>
